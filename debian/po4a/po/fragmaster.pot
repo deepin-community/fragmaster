@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE
+# Copyright (C) YEAR Free Software Foundation, Inc.
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2014-01-14 15:31+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: =head1
+#: po4a/fragmaster:455
+msgid "NAME"
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:457
+msgid "fragmaster - Using psfrag constructs with pdflatex"
+msgstr ""
+
+#. type: =head1
+#: po4a/fragmaster:459
+msgid "SYNOPSIS"
+msgstr ""
+
+#. type: verbatim
+#: po4a/fragmaster:461
+#, no-wrap
+msgid ""
+" fragmaster [options]\n"
+"\n"
+msgstr ""
+
+#. type: verbatim
+#: po4a/fragmaster:463
+#, no-wrap
+msgid ""
+" Create EPS and PDF files with embedded psfrag substitutions.\n"
+"\n"
+msgstr ""
+
+#. type: verbatim
+#: po4a/fragmaster:465
+#, no-wrap
+msgid ""
+" Options:\n"
+"  -h,--help          Brief usage guide.\n"
+"  -m,--man           Show full man page (needs perldoc)\n"
+"  --clean            Clean auto-generated $basename.{eps,pdf} files.\n"
+"  --debug            Show more info and leave temporary files behind.\n"
+"  --force            Rebuild everything ignoring modification times.\n"
+"  --dirfm=file       Use given file as optional per-directory\n"
+"                     fragmaster fm control file instead of default\n"
+"                     \"fragmaster.dfm\".\n"
+"\n"
+msgstr ""
+
+#. type: =head1
+#: po4a/fragmaster:475
+msgid "DESCRIPTION"
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:477
+msgid ""
+"B<fragmaster> is a perl script that helps using psfrag constructs with "
+"B<pdflatex>."
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:480
+msgid ""
+"B<psfrag> is a LaTeX package which allows to replace text elements in "
+"included EPS graphics by arbitrary LaTeX output. Because B<psfrag> uses "
+"PostScript for making the replacements, in principle you can't use B<psfrag> "
+"with B<pdflatex> which doesn't have any interfaces to PostScript."
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:486
+msgid ""
+"B<fragmaster> produces a new EPS from your original EPS which already "
+"contains all those B<psfrag> replacements. This new EPS graphic actually can "
+"be converted to PDF including all replacements. The resulting "
+"\"encapsulated\" PDF can then be used with pdflatex."
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:491
+msgid ""
+"B<fragmaster> will scan the current directory for files which end in F<_fm> "
+"and have a F<_fm.eps> counterpart.  Looking at the modification dates, the "
+"script checks if the output files have to be rebuilt and does so if "
+"necessary (a little like \"make\" would do it)."
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:497
+msgid "In your LaTeX document you can include the produced graphics using"
+msgstr ""
+
+#. type: verbatim
+#: po4a/fragmaster:499
+#, no-wrap
+msgid ""
+" \\includegraphics{<graphics>}\n"
+"\n"
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:501
+msgid ""
+"conveniently omitting file extension.  B<latex> will choose the EPS, "
+"B<pdflatex> will choose the PDF."
+msgstr ""
+
+#. type: =head2
+#: po4a/fragmaster:504
+msgid "B<fragmaster> control file and other related files."
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:506
+msgid "To use the script you have to create two files per graphic:"
+msgstr ""
+
+#. type: verbatim
+#: po4a/fragmaster:508
+#, no-wrap
+msgid ""
+"    * <graphics>_fm.eps: the EPS file itself,\n"
+"    * <graphics>_fm: a fragmaster control file.\n"
+"\n"
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:511
+msgid "From these files the psfragged graphics will be created:"
+msgstr ""
+
+#. type: verbatim
+#: po4a/fragmaster:513
+#, no-wrap
+msgid ""
+"    * <graphics>.eps,\n"
+"    * <graphics>.pdf\n"
+"\n"
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:516
+msgid ""
+"The F<_fm> control file is basically a LaTeX file (with optionally special "
+"comments) and can look like this:"
+msgstr ""
+
+#. type: verbatim
+#: po4a/fragmaster:519
+#, no-wrap
+msgid ""
+" % Just an ordinary comment\n"
+" %\n"
+" % Some special comments:\n"
+" % fmclass: book\n"
+" % fmclassopt: 11pt\n"
+" % fmopt: width=6cm\n"
+" %\n"
+" % Another special comment:\n"
+" % head:\n"
+" % \\usepackage{amsmath}\n"
+" % end head\n"
+"\n"
+msgstr ""
+
+#. type: verbatim
+#: po4a/fragmaster:531
+#, no-wrap
+msgid ""
+" % psfrag commands:\n"
+" \\psfrag{x}{$x$}\n"
+" \\psfrag{y}{$y = x^2$}\n"
+"\n"
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:535
+msgid ""
+"Special comment C<fmclass:> will make the script use given class instead of "
+"default C<article> class."
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:538
+msgid ""
+"Special comment C<fmclassopt:> will make the script use given options as "
+"class options instead of default C<12pt>."
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:541
+msgid ""
+"The special comment C<fmopt:> will be evaluated such that the following text "
+"will by passed as optional argument to C<\\includegraphics>.  This way you "
+"can e.g. adjust the relation between graphics size and font size using "
+"something like C<fmopt: width=6cm>.  No global default for this."
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:548
+msgid ""
+"The special comment construct C<head:/end head> causes the lines in between "
+"to be included in the preamble of the LaTeX temporary document after having "
+"the leading comment characters \"%\" stripped off.  This way, you can "
+"include LaTeX packages, as in C<\\usepackage{amsmath}>.  No global default "
+"for this."
+msgstr ""
+
+#. type: =head2
+#: po4a/fragmaster:554
+msgid "Per-directory B<fragmaster> dir control file."
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:556
+msgid ""
+"You can set per-directory C<fmclass:>, C<fmclassopt:>, C<fmopt:> and "
+"C<head:/end head> options by means of a per-directory fragmaster control "
+"file F<fragmaster.dfm> with similar syntax as above.  You can use another "
+"file by means of the B<--dirfm> option.  Note that options set this way are "
+"mutually exclusive, any option set in per-file F<_fm> file will completely "
+"override associated option in per-directory file, and options set in "
+"per-directory file will override initial defaults "
+"(C<\\documentclass[12pt]{article}>).  Empty options are ignored."
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:566
+msgid ""
+"This is work in progress and still needs extensive checking. Double-check "
+"that modification date based rebuilds are working properly."
+msgstr ""
+
+#. type: =head1
+#: po4a/fragmaster:569
+msgid "KNOWN PROBLEMS"
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:571
+msgid ""
+"In case the EPS will be produced as landscape graphics, i.e. B<gv> shows "
+"I<Landscape> instead of I<Portrait> in the menu bar, and the graphic will "
+"end up turned around 90 degrees in your document, then it is likely that "
+"your original EPS is wider than it is tall.  In this case some (more recent) "
+"versions of B<dvips> make the \"smart\" assumption that your graphic is "
+"landscape, even though the graphic's proportions don't tell anything about "
+"the orientation of its contents...  This still can happen in case your input "
+"EPS matches a standard paper size."
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:580
+msgid ""
+"Anyway, you can make B<dvips> behave nicer by specifying the following line "
+"in F</usr/share/texmf/dvips/config/config.pdf> (or a local equivalent inside "
+"F</usr/local/share/texmf>):"
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:584
+msgid "@ custom 0pt 0pt"
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:586
+msgid ""
+"In the likely case that you're wondering why, I'd recommend the B<dvipsk> "
+"sources warmly to you..."
+msgstr ""
+
+#. type: =head1
+#: po4a/fragmaster:589
+msgid "AUTHORS"
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:591
+msgid ""
+"Tilman Vogel <tilman vogel web de> (dot at dot) and Agustin Martin <agustin "
+"martin hispalinux es> (dot at dot)"
+msgstr ""
+
+#. type: =head1
+#: po4a/fragmaster:594
+msgid "HISTORY"
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:596
+msgid ""
+"This script was inspired by a posting from Karsten Roemke <k roemke gmx de> "
+"(dot at dot) with subject \"psfrag pdflatex, lange her\" in de.comp.text.tex "
+"on 2003-11-11 05:25:44 PST."
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:601
+msgid "Karsten Roemke was inspired for his solution by postings from Thomas Wimmer."
+msgstr ""
+
+#. type: =head1
+#: po4a/fragmaster:604
+msgid "COPYRIGHT"
+msgstr ""
+
+#. type: verbatim
+#: po4a/fragmaster:606
+#, no-wrap
+msgid ""
+" Copyright (C) 2004 Tilman Vogel\n"
+" Copyright (C) 2011-2014 Agustin Martin\n"
+"\n"
+msgstr ""
+
+#. type: textblock
+#: po4a/fragmaster:609
+msgid ""
+"This program is free software; you can redistribute it and/or modify it "
+"under the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""

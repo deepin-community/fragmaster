@@ -1,0 +1,29 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: use of psfrag constructs with pdflatex
+Upstream-Contact: Agustin Martin <agmartin@debian.org>
+Upstream-Source: https://gitlab.com/agmartin/fragmaster
+
+Files: *
+Copyright: 2004 Tilman Vogel
+           2011-2018 Agustin Martin <agmartin@debian.org>
+License: GPL-2+
+
+Files: debian/*
+Copyright: 2009 Rafael Laboissiere <rafael@debian.org>
+           2011-2018 Agustin Martin <agmartin@debian.org>
+License: GPL-3+
+
+Files: debian/po4a/po/de.po
+       debian/po4a/po/pod_add/de.add
+Copyright: 2011,2014 Helge Kreutzmann <debian@helgefjell.de>
+License: GPL-2+
+
+License: GPL-2+
+ On Debian systems, the complete text of the GNU General Public
+ License, version 2, can be found in the file
+ `/usr/share/common-licenses/GPL-2'.
+
+License: GPL-3+
+ On Debian systems, the complete text of the GNU General Public
+ License, version 3, can be found in the file
+ `/usr/share/common-licenses/GPL-3'.

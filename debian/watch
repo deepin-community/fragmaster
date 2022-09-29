@@ -1,0 +1,6 @@
+version=4
+# I am both current upstream and Debian maintainer, no watch file is
+# really needed, but here it goes.
+opts=filenamemangle=s/upstream-//g \
+https://gitlab.com/agmartin/fragmaster/tags?sort=updated_desc \
+  archive/upstream/@ANY_VERSION@/fragmaster-upstream-\d\S*@ARCHIVE_EXT@

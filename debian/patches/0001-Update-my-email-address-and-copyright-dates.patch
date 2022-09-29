@@ -1,0 +1,44 @@
+From da5b4beae757e39352f0bccff7c850d5c967e069 Mon Sep 17 00:00:00 2001
+From: Agustin Martin Domingo <agmartin@debian.org>
+Date: Tue, 6 Oct 2015 13:15:55 +0200
+Subject: [PATCH] Update my email address and copyright dates.
+
+Signed-off-by: Agustin Martin Domingo <agmartin@debian.org>
+---
+ fragmaster.pl | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/fragmaster.pl b/fragmaster.pl
+index cc31d21..2194e3a 100755
+--- a/fragmaster.pl
++++ b/fragmaster.pl
+@@ -10,7 +10,7 @@
+ # Version: 1.7
+ #
+ # Copyright (C) 2004 Tilman Vogel <tilman vogel web de> (dot at dot)
+-# Copyright (C) 2011-2014 Agustin Martin <agustin martin hispalinux es> (dot at dot)
++# Copyright (C) 2011-2015 Agustin Martin <agustin6martin gmail com> (at dot)
+ #
+ # This program is free software; you can redistribute it and/or modify
+ # it under the terms of the GNU General Public License as published by
+@@ -589,7 +589,7 @@ B<dvipsk> sources warmly to you...
+ =head1 AUTHORS
+ 
+ Tilman Vogel <tilman vogel web de> (dot at dot) and
+-Agustin Martin <agustin martin hispalinux es> (dot at dot)
++Agustin Martin <agustin6martin gmail com> (at dot)
+ 
+ =head1 HISTORY
+ 
+@@ -604,7 +604,7 @@ Thomas Wimmer.
+ =head1 COPYRIGHT
+ 
+  Copyright (C) 2004 Tilman Vogel
+- Copyright (C) 2011-2014 Agustin Martin
++ Copyright (C) 2011-2015 Agustin Martin
+ 
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+-- 
+2.6.1
+

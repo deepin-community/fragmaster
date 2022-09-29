@@ -1,0 +1,26 @@
+From 9b8d5e7d537c47489ce14a6edfbbda5af20ff3df Mon Sep 17 00:00:00 2001
+From: Agustin Martin Domingo <agmartin@debian.org>
+Date: Thu, 15 Nov 2018 15:26:10 +0100
+Subject: [PATCH] fragmaster.pl;: Typo fix in pod, allows to -> allows one to.
+
+Signed-off-by: Agustin Martin Domingo <agmartin@debian.org>
+---
+ fragmaster.pl | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/fragmaster.pl b/fragmaster.pl
+index 2194e3a..5bf4082 100755
+--- a/fragmaster.pl
++++ b/fragmaster.pl
+@@ -477,7 +477,7 @@ fragmaster - Using psfrag constructs with pdflatex
+ B<fragmaster> is a perl script that helps using psfrag constructs with
+ B<pdflatex>.
+ 
+-B<psfrag> is a LaTeX package which allows to replace text elements in
++B<psfrag> is a LaTeX package which allows one to replace text elements in
+ included EPS graphics by arbitrary LaTeX output. Because B<psfrag>
+ uses PostScript for making the replacements, in principle you can't
+ use B<psfrag> with B<pdflatex> which doesn't have any interfaces to
+-- 
+2.19.1
+

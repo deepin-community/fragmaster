@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+#
+# debian/rules for fragmaster package
+# Copyright (C) 2009       Rafael Laboissiere
+# Copyright (C) 2010-2021  Agustin Martin
+# Released under the terms of the GNU GPL, v3 or later.
+# No warranties.
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	make -C debian/po4a man
+
+override_dh_auto_clean:
+	make -C debian/po4a clean
+	dh_auto_clean
+
+override_dh_auto_install:
+	install --mode=755 fragmaster.pl debian/fragmaster/usr/bin/fragmaster
+	dh_perl fragmaster.pl
+	dh_auto_install
